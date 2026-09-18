@@ -1,6 +1,6 @@
 # @aadiaiagent/api-contract-kit
 
-Lightweight **API contract definitions** and **breaking-change detection** for Principal/Staff platform work. Additive evolution is allowed; removals and type changes fail the gate. Zero runtime dependencies — TypeScript + Vitest + tsx only.
+Lightweight **API contract definitions** and **breaking-change detection**. Additive evolution is allowed; removals and type changes fail the gate. Zero runtime dependencies — TypeScript + Vitest + tsx only. Small surface area — readable in one sitting.
 
 ## Why contracts gate deploys
 
@@ -54,7 +54,7 @@ if (!report.compatible) {
 - **Endpoint identity = `METHOD path`.** Keeps comparison deterministic and readable in CI logs.
 - **Field removal always breaks.** Optional fields still appear in client SDKs and docs; deleting them is a consumer-visible event.
 - **No runtime validators.** This kit gates *definition* evolution. Pair with Zod/ajv at the edge if you need request validation.
-- **Zero runtime deps.** Fits interview-sized repos and air-gapped CI.
+- **Zero runtime deps.** Fits small-surface repos and air-gapped CI.
 
 ## Layout
 
