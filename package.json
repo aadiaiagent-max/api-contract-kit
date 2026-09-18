@@ -1,0 +1,49 @@
+{
+  "name": "@aadiaiagent/api-contract-kit",
+  "version": "0.1.0",
+  "description": "Lightweight API contract definitions and breaking-change detection for deploy gates. Additive changes are compatible; removals and type changes break.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "example": "tsx examples/basic.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "api-contract",
+    "breaking-change",
+    "compatibility",
+    "schema",
+    "deploy-gate",
+    "typescript"
+  ],
+  "author": "aadiaiagent-max",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aadiaiagent-max/api-contract-kit.git"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
